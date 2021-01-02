@@ -1,0 +1,17 @@
+#!/usr/bin/env ruby
+
+require 'bundler/setup'
+require 'influx2rb'
+
+require 'i2r/cli'
+require 'i2r/cli/parser'
+
+puts 'HELLO WORLD'
+
+args = ARGV
+
+options = I2r::Cli::Parser.parse args
+
+puts options.inspect
+puts "DONE"
+
