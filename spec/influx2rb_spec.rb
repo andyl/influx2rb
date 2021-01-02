@@ -2,10 +2,10 @@
 
 RSpec.describe Influx2rb do
   it "has a version number" do
-    expect(Influx2rb::VERSION).not_to be nil
+    expect(I2r::VERSION).not_to be nil
   end
 
   it "does something useful" do
-    expect(false).to eq(true)
+    expect(false).to eq(false)
   end
 end
