@@ -32,7 +32,7 @@ git commits and the created tag, and push the `.gem` file to
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/andyl/influx2rb.
+Bug reports and pull requests are always welcome on GitHub at https://github.com/andyl/influx2rb.
 
 ## License
 
