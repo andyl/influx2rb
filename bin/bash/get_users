@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+shopt -s expand_aliases
+source ~/.bashrc_code
+
+token=$(opx ixowner tokn)
+
+curl --request GET http://localhost:8086/api/v2/users \
+  --header "Authorization: Token $token" \

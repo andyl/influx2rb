@@ -1,0 +1,58 @@
+#!/usr/bin/env bash
+
+# bash/setup - setup an influx server
+# uses the influx CLI
+
+clear
+
+shopt -s expand_aliases
+source ~/.bashrc_code
+
+echo "Remove old influx data"
+cd /var/lib/influxdb
+sudo rm -rf engine influxd.bolt
+cd ~
+sudo rm -rf .influxdbv2
+
+echo "Restart influx service"
+sudo systemctl restart influxdb.service
+sleep 3
+
+echo "Setup influx instance"
+influx setup -u $(opx ixowner user) -p $(opx ixowner pass) -t $(opx ixowner tokn) -o org1 -b bkt1 -r 4h -f
+
+echo "Create second organization"
+influx org create -n org2
+
+echo "Create influx users"
+influx user create -n $(opx ixmanager user)  -p $(opx ixmanager pass) -t $(opx ixowner tokn) -o org1
+influx user create -n $(opx ixuser user)     -p $(opx ixuser pass)    -t $(opx ixowner tokn) -o org1
+
+echo "Create buckets for org1"
+influx bucket create -n telegraf -o org1 -r 52w
+influx bucket create -n weather  -o org1 -r 52w
+
+echo "Create tokens for org1"
+influx auth create -o org1 -d Org1AllAccess -u managerx \
+  --read-buckets \
+  --read-checks \
+  --read-dashboards \
+  --read-dbrps \
+  --read-notificationEndpoints \
+  --read-notificationRules \
+  --read-orgs \
+  --read-tasks \
+  --read-telegrafs \
+  --read-user \
+  --write-buckets \
+  --write-checks \
+  --write-dashboards \
+  --write-dbrps \
+  --write-notificationEndpoints \
+  --write-notificationRules \
+  --write-orgs \
+  --write-tasks \
+  --write-telegrafs \
+  --write-user
+
+

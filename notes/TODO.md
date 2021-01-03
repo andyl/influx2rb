@@ -16,6 +16,7 @@
 
 ## TBD
 
+- [ ] Use API with Curl
 - [ ] Get client working end-to-end
 - [ ] Get CLI working end-to-end
 
