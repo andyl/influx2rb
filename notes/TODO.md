@@ -1,12 +1,5 @@
 # Influx2rb TODO
 
-## TBD
-
-- [ ] Get Tests working with Client class
-- [ ] Get HTTP working with RestClient
-
-- [ ] Add CI
-
 ## 2021 Jan 01 Fri
 
 - [x] Initial creation
@@ -16,7 +9,14 @@
 
 - [x] Read Toml Config
 - [x] Get test watcher working
+- [x] Test / Subject Navigation
+- [x] Test LSP navigation
+- [x] Get snippets working
+- [x] Get Specs working 
 
-- [ ] Test / Subject Navigation
-- [ ] Get snippets working
+## TBD
 
+- [ ] Get client working end-to-end
+- [ ] Get CLI working end-to-end
+
+- [ ] Add CI

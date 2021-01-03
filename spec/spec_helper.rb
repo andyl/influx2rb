@@ -1,13 +1,12 @@
-# frozen_string_literal: true
-
-require "influx2rb"
+require 'influx2rb'
+require 'rspec'
 
 RSpec.configure do |config|
   # Enable flags like --only-failures and --next-failure
   config.example_status_persistence_file_path = ".rspec_status"
 
   # Disable RSpec exposing methods globally on `Module` and `main`
-  config.disable_monkey_patching!
+  # config.disable_monkey_patching!
 
   config.expect_with :rspec do |c|
     c.syntax = :expect

@@ -1,6 +1,5 @@
-# frozen_string_literal: true
+describe Influx2rb do
 
-RSpec.describe Influx2rb do
   it "has a version number" do
     expect(I2r::VERSION).not_to be nil
   end
@@ -8,4 +7,5 @@ RSpec.describe Influx2rb do
   it "does something useful" do
     expect(false).to eq(false)
   end
+
 end
