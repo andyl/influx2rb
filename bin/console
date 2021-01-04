@@ -1,5 +1,6 @@
 #!/usr/bin/env ruby
-# frozen_string_literal: true
+
+# This script simply loads the `influx2rb` classes and starts an IRB session.
 
 require 'irb'
 IRBCFG = File.expand_path('~/.irbrc')

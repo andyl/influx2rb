@@ -2,6 +2,9 @@
 
 This gem `influx2rb` is a simple Ruby interface to InfluxDB 2.
 
+The gem includes a CLI, and is intended to be simple for hacking, extension and
+experimentation.
+
 ## Installation
 
 Add this line to your application's Gemfile:

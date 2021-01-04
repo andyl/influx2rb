@@ -3,9 +3,6 @@
 require 'i2r/version'
 
 require 'i2r/cli'
-require 'i2r/cli/parser'
-require 'i2r/cli/user'
-require 'i2r/cli/buckets'
 
 require 'i2r/cmd'
 require 'i2r/cmd/authentication'

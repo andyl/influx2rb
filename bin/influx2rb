@@ -1,18 +1,12 @@
 #!/usr/bin/env ruby
 
+require 'rubygems'
+require 'thor'
+
 require 'bundler/setup'
-require 'influx2rb'
 
-# require 'i2r'
-# require 'i2r/cli'
-# require 'i2r/cli/parser'
+require 'i2r'
+require 'i2r/cli'
+require 'i2r/cli/app'
 
-puts 'HELLO WORLD'
-
-args = ARGV
-
-options = I2r::Cli::Parser.parse args
-
-puts options.inspect
-puts "DONE"
-
+I2r::Cli::App.start
