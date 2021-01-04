@@ -1,11 +1,22 @@
 # influx2rb
 
-This gem `influx2rb` is a simple Ruby interface to InfluxDB 2.
+This gem `influx2rb` is a simple Ruby interface that uses the InfluxDB 2.0 API.
 
-The gem includes a CLI, and is intended to be simple for hacking, extension and
+The gem includes a CLI, and is intended to be simple for hacking and
 experimentation.
 
-## Installation
+The gem exposes only a subset of the InfluxDB 2.0 API.  The code should be
+straightforward to extend to cover more API features.
+
+## CLI
+
+Install the CLI as:
+
+    $ gem install influx2rb
+
+Then run the CLI `influx2rb help` to see the command-line options.
+
+## Embedding
 
 Add this line to your application's Gemfile:
 
@@ -17,15 +28,14 @@ And then execute:
 
     $ bundle install
 
-Or install it yourself as:
-
-    $ gem install influx2rb
+To embed `influx2rb` into your application, study the `I2r::Client` and
+`I2r::Cmd` classes.
 
 ## Development
 
 After checking out the repo, run `bin/setup` to install dependencies. Then, run
 `rake spec` to run the tests. You can also run `bin/console` for an interactive
-prompt that will allow you to experiment.
+prompt that will allow you to experiment.  Run `rdoc` to generate docs.
 
 To install this gem onto your local machine, run `bundle exec rake install`. To
 release a new version, update the version number in `version.rb`, and then run

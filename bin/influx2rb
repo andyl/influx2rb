@@ -9,4 +9,4 @@ require 'i2r'
 require 'i2r/cli'
 require 'i2r/cli/app'
 
-I2r::Cli::App.start
+I2r::Cli::App.start(ARGV)

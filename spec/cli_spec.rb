@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe "Aruba Rspec", :type => :aruba do
+describe "CLI Executable", :type => :aruba do
 
   context "basic aruba" do
     it "is defined" do
@@ -14,11 +14,9 @@ describe "Aruba Rspec", :type => :aruba do
       expect($?.exitstatus).to eq(0)
     end
 
-    it "runs pwd" do
-      result = `bin/influx2rb`
-      puts result.inspect
-      puts $?.inspect
-      expect(1).to eq(1)
+    it "runs the binary" do
+      `bin/influx2rb`
+      expect($?.exitstatus).to eq(0)
     end
   end
 

@@ -17,14 +17,20 @@
 ## 2021 Jan 03 Sun
 
 - [x] Use API with Curl
-- [x] Get client working end-to-end
+- [x] Get I2r::Client working end-to-end
+- [x] Get Thor working with subcommands for CLI
+- [x] Get CLI working end-to-end
+
+## 2021 Jan 04 Mon
+
+- [x] Use Thor Flags
+- [x] Add version number
 
 ## TBD
 
-- [ ] Get thor working with subcommands
-- [ ] Setup CLI test approach
-- [ ] Get CLI working end-to-end
+- [ ] Create configs 
 
 - [ ] Make guard run tests when source changes
-
-- [ ] Add CI
+- [ ] Add cleanup RDOC comments
+- [ ] Setup CI
+- [ ] Release as Ruby Gem
