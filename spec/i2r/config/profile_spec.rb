@@ -1,3 +1,5 @@
+require 'spec_helper'
+
 describe I2r::Config::Profile do
 
   let(:klas) { I2r::Config::Profile }
@@ -18,10 +20,27 @@ describe I2r::Config::Profile do
   context "object attributes" do
 
     it "has default field values" do
-      expect(obj.host).to_not be_nil
-      expect(obj.user).to_not be_nil
-      expect(obj.pass).to_not be_nil
+      expect(obj.url).to_not be_nil
+      expect(obj.org).to_not be_nil
+      expect(obj.token).to_not be_nil
     end
+
+    it "accepts arguments" do
+      args = {"url" => "asdf", "org" => "qwer", "token" => "zxcv"}
+      myobj = klas.new(args)
+      expect(myobj.url).to eq(args["url"])
+      expect(myobj.org).to eq(args["org"])
+      expect(myobj.token).to eq(args["token"])
+    end
+
+    it "converts symbol keys to string keys" do
+      args = {url: "asdf", org: "qwer", token: "zxcv"}
+      myobj = klas.new(args)
+      expect(myobj.url).to eq(args[:url])
+      expect(myobj.org).to eq(args[:org])
+      expect(myobj.token).to eq(args[:token])
+    end
+
   end
 
 end

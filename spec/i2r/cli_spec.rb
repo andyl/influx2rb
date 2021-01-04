@@ -1,3 +1,5 @@
+require 'spec_helper'
+
 describe I2r::Cli do
 
   it "works" do

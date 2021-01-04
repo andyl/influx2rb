@@ -1,5 +1,6 @@
 require 'influx2rb'
 require 'rspec'
+require 'aruba/rspec'
 
 RSpec.configure do |config|
   # Enable flags like --only-failures and --next-failure

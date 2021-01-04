@@ -1,4 +1,4 @@
-class I2r::Cmd::Users
+class I2r::Cmd::Sources
 
   attr_reader :client
 
@@ -7,7 +7,7 @@ class I2r::Cmd::Users
   end
 
   def get
-    client.interface.get("/users")
+    client.interface.get("/sources")
   end
 
 end

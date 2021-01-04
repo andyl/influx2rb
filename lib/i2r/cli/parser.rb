@@ -8,7 +8,11 @@ class I2r::Cli::Parser
     args = Options.new("world")
 
     opt_parser = OptionParser.new do |opts|
-      opts.banner = "Usage: example.rb [options]"
+      opts.banner = "Usage: influx2rb [options]"
+
+      opts.on("-cCONFIG", "--config=CONFIG", "Name of config to use") do |c|
+        args.config = c
+      end
 
       opts.on("-nNAME", "--name=NAME", "Name to say hello to") do |n|
         args.name = n

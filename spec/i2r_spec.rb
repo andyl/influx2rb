@@ -1,3 +1,5 @@
+require 'spec_helper'
+
 describe I2r do
 
   it "does something useful" do

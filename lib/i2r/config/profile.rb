@@ -2,13 +2,12 @@ require 'i2r/config'
 
 class I2r::Config::Profile
 
-  attr_accessor :host, :user, :pass
+  attr_accessor :args, :url, :org, :token
 
-  def initialize(args = {})
-    @args = args
-    @host = args[:host] || "TBD"
-    @user = args[:user] || "TBD"
-    @pass = args[:pass] || "TBD"
+  def initialize(input = {})
+    @args  = input.map {|k, v| [k.to_s, v]}.to_h
+    @url   = args["url"]   || "http://localhost:8086"
+    @org   = args["org"]   || "TBD"
+    @token = args["token"] || "TBD"
   end
-
 end

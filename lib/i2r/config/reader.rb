@@ -6,7 +6,7 @@ class I2r::Config::Reader
   CFGFILE = File.expand_path('~/.influxdbv2/configs')
 
   def self.configs
-    raw_data.map {|k, v| [k.to_s, Profile.new(v)]}.to_h
+    raw_data.map {|k, v| [k.to_s, I2r::Config::Profile.new(v)]}.to_h
   end
 
   def self.raw_data

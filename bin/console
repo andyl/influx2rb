@@ -8,4 +8,6 @@ load IRBCFG if File.exist?(IRBCFG)
 require 'bundler/setup'
 require 'influx2rb'
 
+system("clear")
+
 IRB.start

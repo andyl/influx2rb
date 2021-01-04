@@ -14,10 +14,17 @@
 - [x] Get snippets working
 - [x] Get Specs working 
 
+## 2021 Jan 03 Sun
+
+- [x] Use API with Curl
+- [x] Get client working end-to-end
+
 ## TBD
 
-- [ ] Use API with Curl
-- [ ] Get client working end-to-end
+- [ ] Get thor working with subcommands
+- [ ] Setup CLI test approach
 - [ ] Get CLI working end-to-end
+
+- [ ] Make guard run tests when source changes
 
 - [ ] Add CI

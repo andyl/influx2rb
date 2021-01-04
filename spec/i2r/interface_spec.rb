@@ -1,7 +1,10 @@
+require 'spec_helper'
+
 describe I2r::Interface do
 
-  let(:klas) { I2r::Interface }
-  let(:obj)  { klas.new }
+  let(:klas)   { I2r::Interface }
+  let(:client) { I2r::Client.new }
+  let(:obj)    { klas.new(client) }
 
   context "object creation" do
 

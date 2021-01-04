@@ -1,3 +1,5 @@
+require 'spec_helper'
+
 describe Influx2rb do
 
   it "has a version number" do

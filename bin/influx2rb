@@ -3,8 +3,9 @@
 require 'bundler/setup'
 require 'influx2rb'
 
-require 'i2r/cli'
-require 'i2r/cli/parser'
+# require 'i2r'
+# require 'i2r/cli'
+# require 'i2r/cli/parser'
 
 puts 'HELLO WORLD'
 
