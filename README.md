@@ -8,6 +8,7 @@ experimentation.
 The gem exposes only a subset of the InfluxDB 2.0 API.  The code should be
 straightforward to extend to cover more API features.
 
+
 ## CLI
 
 Install the CLI as:
