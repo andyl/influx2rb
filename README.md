@@ -8,7 +8,6 @@ experimentation.
 The gem exposes only a subset of the InfluxDB 2.0 API.  The code should be
 straightforward to extend to cover more API features.
 
-
 ## CLI
 
 Install the CLI as:
@@ -43,6 +42,10 @@ release a new version, update the version number in `version.rb`, and then run
 `bundle exec rake release`, which will create a git tag for the version, push
 git commits and the created tag, and push the `.gem` file to
 [rubygems.org](https://rubygems.org).
+
+To run tests:
+- bundle exec rake spec
+- bundle exec guard -c
 
 ## Contributing
 

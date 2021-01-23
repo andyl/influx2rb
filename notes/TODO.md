@@ -26,9 +26,11 @@
 - [x] Use Thor Flags
 - [x] Add version number
 
-## TBD
+## 2021 Jan 22 Fri
 
 - [ ] Create configs 
+
+## TBD
 
 - [ ] Make guard run tests when source changes
 - [ ] Add cleanup RDOC comments
